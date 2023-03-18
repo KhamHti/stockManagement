@@ -8,6 +8,7 @@ const ClientsRouter = require("./src/Clients/clients.route");
 const InventoryRouter = require("./src/Inventory/inventory.route");
 const InvenOpeRouter = require("./src/Inventory_Operations/InvenOpe.route");
 const InvoicesRouter = require("./src/Invoices/invoices.route");
+const LaborsRouter = require("./src/Labors/labors.route");
 
 const server = express();
 
@@ -27,6 +28,7 @@ server.use("/clients", ClientsRouter);
 server.use("/inventory", InventoryRouter);
 server.use("/inventoryopereations", InvenOpeRouter);
 server.use("/invoices", InvoicesRouter);
+server.use("/labors", LaborsRouter);
 
 server.listen(process.env.PORT, () => {
   console.log("Server is listening at PORT :", process.env.PORT);
