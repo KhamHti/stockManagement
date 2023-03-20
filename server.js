@@ -13,6 +13,7 @@ const MessageRouter = require("./src/Messages/message.route");
 const modelPartRouter = require("./src/Model_parts/modelParts.route");
 const modelsRouter = require("./src/Models/models.route");
 const partsRouter = require("./src/Parts/parts.route");
+const repaireLaborRouter = require("./src/Repaire_labor/repaireLabor.route");
 
 const server = express();
 
@@ -37,6 +38,7 @@ server.use("/messages", MessageRouter);
 server.use("/modelparts", modelPartRouter);
 server.use("/models", modelsRouter);
 server.use("/parts", partsRouter);
+server.use("/repairelabors", repaireLaborRouter);
 
 server.listen(process.env.PORT, () => {
   console.log("Server is listening at PORT :", process.env.PORT);
