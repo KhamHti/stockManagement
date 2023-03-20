@@ -17,6 +17,7 @@ const repaireLaborRouter = require("./src/Repaire_labor/repaireLabor.route");
 const repaireStatusRouter = require("./src/Repaire_status/repaireStatus.route");
 const RepairsRouter = require("./src/Repairs/Repairs.route");
 const StatusRouter = require("./src/Status/Status.route");
+const UsersRouter = require("./src/Users/Users.route");
 
 const server = express();
 
@@ -45,6 +46,7 @@ server.use("/repairelabors", repaireLaborRouter);
 server.use("/repairestatus", repaireStatusRouter);
 server.use("/repairs", RepairsRouter);
 server.use("/status", StatusRouter);
+server.use("/users", UsersRouter);
 
 server.listen(process.env.PORT, () => {
   console.log("Server is listening at PORT :", process.env.PORT);
